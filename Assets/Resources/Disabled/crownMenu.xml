@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<warehouse>
+		<caption>Warehouse</caption>
+		<title>WAREHOUSE SIZE</title>
+		<button name="range">
+			<caption>Number of Aisles</caption>
+			<min>1</min>
+			<max>150</max>
+			<increment>1</increment>
+			<default>5</default>
+		</button>
+		<button name="range">
+			<caption>Number Of Bays Down Aisle</caption>
+			<min>1</min>
+			<max>150</max>
+			<increment>1</increment>
+			<default>5</default>
+		</button>
+		<button name="range">
+			<caption>Number of Levels</caption>
+			<min>1</min>
+			<max>17</max>
+			<increment>1</increment>
+			<default>5</default>
+		</button>
+		<line></line>
+		<title>RACKING</title>
+		<button name="range">
+			<caption>Vertical Beam Spacing</caption>
+			<min>1000</min>
+			<max>3000</max>
+			<increment>50</increment>
+			<unit>mm</unit>
+			<default>1600</default>
+		</button>
+		<button name="toggle">
+			<caption>Bottom Beam Present</caption>
+			<default>false</default>
+			<button name="range">
+				<caption>Bottom Beam Height</caption>
+				<min>200</min>
+				<max>1000</max>
+				<increment>50</increment>
+				<unit>mm</unit>
+				<default>200</default>
+			</button>
+		</button>
+		<button name="range">
+			<caption>Beam Length</caption>
+			<min>1200</min>
+			<max>4000</max>
+			<increment>50</increment>
+			<unit>mm</unit>
+			<default>2700</default>
+		</button>
+		<button name="range">
+			<caption>Number of Pallets per Beam</caption>
+			<min>1</min>
+			<max>4</max>
+			<increment>1</increment>
+			<default>2</default>
+		</button>
+		<line></line>
+		<title>P&amp;D</title>
+		<button name="list">
+			<caption>Inbound and Outbound Station</caption>
+			<option>Same End</option>
+			<option>Opposite Ends</option>
+			<default>Same End</default>
+		</button>
+		<button name="list">
+			<caption>Pick Up Location for Putaway</caption>
+			<option>Dock</option>
+			<option>P&amp;D</option>
+			<default>P&amp;D</default>
+		</button>
+		<button name="list">
+			<caption>Drop Off Location for Retrieval</caption>
+			<option>Dock</option>
+			<option>P&amp;D</option>
+			<default>P&amp;D</default>
+		</button>
+		<button name="range">
+			<caption>No. of P&amp;D Beams Across</caption>
+			<min>1</min>
+			<max>4</max>
+			<increment>1</increment>
+			<default>1</default>
+		</button>
+		<button name="range">
+			<caption>No. of P&amp;D Levels</caption>
+			<min>1</min>
+			<max>17</max>
+			<increment>1</increment>
+			<default>6</default>
+		</button>
+	</warehouse>
+	<operation>
+		<caption>Operation</caption>
+		<title>Operation test title</title>
+	</operation>
+	<truck>
+		<caption>Truck</caption>
+		<title>Truck test title</title>
+	</truck>
+</menu>

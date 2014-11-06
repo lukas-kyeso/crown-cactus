@@ -1,0 +1,114 @@
+<?xml version=“1.0” encoding=“UTF-8?>
+<warehouse>
+	<title>WAREHOUSE SIZE</title>
+	<numberOfAisles>
+		<type>range</type>
+		<caption>No. of Aisles</caption>
+		<min>1</min>
+		<max>150</max>
+		<increment>1</increment>
+        <default>5</default>
+	</numberOfAisles>
+	<numberOfBaysDownAisle>
+		<type>range</type>
+		<caption>No. of Bays Down Aisle</caption>
+		<min>1</min>
+		<max>150</max>
+		<increment>1</increment>
+        <default>7</default>
+	</numberOfBaysDownAisle>
+	<numberOfLevels>
+		<type>range</type>
+		<caption>No. of Levels</caption>
+		<min>1</min>
+		<max>17</max>
+		<increment>1</increment>
+        <default>5</default>
+	</numberOfLevels>
+	<line></line>
+	<title>RACKING</title>
+	<verticalBeamSpacing>
+		<type>range</type>
+		<caption>Vertical Beam Spacing</caption>
+		<min>1000</min>
+		<max>3000</max>
+		<increment>50</increment>
+		<unit>mm</unit>
+        <default>1600</default>
+	</verticalBeamSpacing>
+	<bottomBeamPresent>
+		<type>toggle</type>
+		<caption>Bottom Beam Present</caption>
+        <default>false</default>
+			<BottomBeamHeight>
+				<type>range</type>
+				<caption>Bottom Beam Height</caption>
+				<min>200</min>
+				<max>1000</max>
+				<increment>50</increment>
+				<unit>mm</unit>
+                <default>200</default>
+			</BottomBeamHeight>
+    </bottomBeamPresent>
+    <beamLength>
+        <type>range</type>
+        <caption>Beam Length</caption>
+        <min>1200</min>
+        <max>4000</max>
+        <increment>50</increment>
+        <unit>mm</unit>
+        <default>2700</default>
+    </beamLength>
+    <numberOfPalletsPerBeam>
+        <type>range</type>
+        <caption>No. of Pallets per Beam</caption>
+        <min>1</min>
+        <max>4</max>
+        <increment>1</increment>
+        <default>2</default>
+    </numberOfPalletsPerBeam>
+    <line></line>
+    <title>P&amp;D</title>
+    <inboundAndOutboundStation>
+        <type>list</type>
+        <caption>Inbound and Outbound Station</caption>
+        <option>Same End</option>
+        <option>Opposite Ends</option>
+        <default>Same End</default>
+    </inboundAndOutboundStation>
+    <pickUpLocationForPutaway>
+        <type>list</type>
+        <caption>Pick Up Location for Putaway</caption>
+        <option>DOCK</option>
+        <option>P&amp;D</option>
+        <default>DOCK</default>
+    </pickUpLocationForPutaway>
+    <dropOffLocationForRetrieval>
+        <type>list</type>
+        <caption>Drop Off Location for Retrieval</caption>
+        <option>DOCK</option>
+        <option>P&amp;D</option>
+        <default>P&amp;D</default>
+    </dropOffLocationForRetrieval>
+    <numberOfPNDBeamsAcross>
+        <type>range</type>
+        <caption>No. P&amp;D Beams Across</caption>
+        <min>1</min>
+        <max>4</max>
+        <increment>1</increment>
+        <default>1</default>
+    </numberOfPNDBeamsAcross>
+    <numberOfPPNDLevels>
+        <type>range</type>
+        <min>1</min>
+        <max>17</max>
+        <increment>1</increment>
+        <default>3</default>
+    </numberOfPPNDLevels>
+</warehouse>
+<operation>
+</operation>
+<truck>
+</truck>
+    
+    

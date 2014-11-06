@@ -1,0 +1,36 @@
+E:\Connor\Documents\_Swibo\Swibo\Repo\crownforklifts\Temp\bin\Debug\Assembly-CSharp.dll
+E:\Connor\Documents\_Swibo\Swibo\Repo\crownforklifts\Temp\bin\Debug\Assembly-CSharp.pdb
+E:\Connor\Documents\_Swibo\Swibo\Repo\crownforklifts\Temp\bin\Debug\UnityEditor.dll
+E:\Connor\Documents\_Swibo\Swibo\Repo\crownforklifts\Temp\bin\Debug\UnityEngine.dll
+E:\Connor\Documents\_Swibo\Swibo\Repo\crownforklifts\Temp\bin\Debug\Mono.Cecil.dll
+E:\Connor\Documents\_Swibo\Swibo\Repo\crownforklifts\Temp\bin\Debug\nunit.framework.dll
+E:\Connor\Documents\_Swibo\Swibo\Repo\crownforklifts\Temp\bin\Debug\Unity.DataContract.dll
+E:\Connor\Documents\_Swibo\Swibo\Repo\crownforklifts\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+E:\Connor\Documents\_Swibo\Swibo\Repo\crownforklifts\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+E:\Connor\Documents\_Swibo\Swibo\Repo\crownforklifts\obj\Debug\Assembly-CSharp.dll
+E:\Connor\Documents\_Swibo\Swibo\Repo\crownforklifts\obj\Debug\Assembly-CSharp.pdb
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\Temp\bin\Debug\Assembly-CSharp.dll
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\Temp\bin\Debug\Assembly-CSharp.pdb
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\Temp\bin\Debug\Assembly-UnityScript-firstpass.dll
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\Temp\bin\Debug\UnityEditor.dll
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\Temp\bin\Debug\UnityEngine.dll
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\Temp\bin\Debug\Mono.Cecil.dll
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\Temp\bin\Debug\nunit.framework.dll
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\Temp\bin\Debug\Unity.DataContract.dll
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\obj\Debug\Assembly-CSharp.dll
+E:\Unity Projects\CrownFactoryApp\CrownFactoryApp\crownforklifts\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Connor\Desktop\crownforklifts\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Connor\Desktop\crownforklifts\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Connor\Desktop\crownforklifts\Temp\bin\Debug\Assembly-UnityScript-firstpass.dll
+C:\Users\Connor\Desktop\crownforklifts\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Connor\Desktop\crownforklifts\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Connor\Desktop\crownforklifts\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Connor\Desktop\crownforklifts\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Connor\Desktop\crownforklifts\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Connor\Desktop\crownforklifts\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Connor\Desktop\crownforklifts\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+C:\Users\Connor\Desktop\crownforklifts\obj\Debug\Assembly-CSharp.dll
+C:\Users\Connor\Desktop\crownforklifts\obj\Debug\Assembly-CSharp.pdb
