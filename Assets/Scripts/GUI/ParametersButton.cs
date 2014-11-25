@@ -2,8 +2,8 @@ using UnityEngine;
 using System.Text.RegularExpressions;
 enum Mode { Default, Range, List };
 public enum Location { none, aisleLocation, bayLocation, levelsLocation, verticalBeamSpacingLocation, bottomBeamHeightLocation, inboundOutboundStationLocation, pickUpLocation, dropOffLocation, pAndDLevelsLocation, pAndDWidthLocation, topLocation, sideLocation }
-enum InboundOutboundStation {sameEnd, oppositeEnds};
-enum PickUpDropOffLocation { dock, pAndD};
+public enum InboundOutboundStation {sameEnd, oppositeEnds};
+public enum PickUpDropOffLocation { dock, pAndD};
 
 public class ParametersButton : MonoBehaviour {
     public Location currentCameraLocation;
@@ -152,10 +152,18 @@ public class ParametersButton : MonoBehaviour {
     
     private float ClearAisleWidth = 1901;
 
-	InboundOutboundStation IOStation = InboundOutboundStation.sameEnd;
+    InboundOutboundStation iOStation = InboundOutboundStation.sameEnd;
+
+   
+
+  
+   
     PickUpDropOffLocation pickUpLocation = PickUpDropOffLocation.dock;
+
+    
     PickUpDropOffLocation dropOffLocation = PickUpDropOffLocation.dock;
 
+    
     // gets incremented every time I add a button, so we know where to draw next one
     private int yPos;
 
@@ -970,17 +978,17 @@ public class ParametersButton : MonoBehaviour {
 			// makes camera wider because we want to show pallets under the menu (this menu is very short, we don't have this problem with long menus because they cover the black space)
 			Camera.main.rect = new Rect(0,-0.05f,1,1);
 
-			if (GUI.Button(new Rect(0, newYPos, sidebarWidth, sectionHeight), "Same End", IOStation == InboundOutboundStation.sameEnd ? selectedRangeStyle : rangeStyle ) && scrollVelocity == 0)
+			if (GUI.Button(new Rect(0, newYPos, sidebarWidth, sectionHeight), "Same End", iOStation == InboundOutboundStation.sameEnd ? selectedRangeStyle : rangeStyle ) && scrollVelocity == 0)
 			{
 				
-				IOStation = InboundOutboundStation.sameEnd;
+				iOStation = InboundOutboundStation.sameEnd;
                 Invoke("refreshInboundOutboundHighlighting", .2f);
 			}
 			newYPos += elementHeight;
-            if (GUI.Button(new Rect(0, newYPos, sidebarWidth, sectionHeight), "Opposite End", IOStation == InboundOutboundStation.oppositeEnds ? selectedRangeStyle : rangeStyle) && scrollVelocity == 0)
+            if (GUI.Button(new Rect(0, newYPos, sidebarWidth, sectionHeight), "Opposite End", iOStation == InboundOutboundStation.oppositeEnds ? selectedRangeStyle : rangeStyle) && scrollVelocity == 0)
 			{
 			
-				IOStation = InboundOutboundStation.oppositeEnds;
+				iOStation = InboundOutboundStation.oppositeEnds;
                 Invoke("refreshInboundOutboundHighlighting", .2f);
 			}     
 		}
@@ -1374,6 +1382,7 @@ public class ParametersButton : MonoBehaviour {
 
     public int NumLevels {
         get { return NumberOfLevels; }
+        set { NumberOfLevels = value; }
     }
 
     public float NumPalletsWide {
@@ -1434,6 +1443,7 @@ public class ParametersButton : MonoBehaviour {
 
     public bool FirstLevelBeamPresent {
         get { return firstLevelBeamPresent; }
+        set { firstLevelBeamPresent = value; }
     }
 
     public int BottomBeamHeight {
@@ -1443,6 +1453,7 @@ public class ParametersButton : MonoBehaviour {
 
     public int VerticalBeamSpacing {
         get { return verticalBeamSpacing; }
+        set { verticalBeamSpacing = value; }
     }
 
     public int BeamLength {
@@ -1465,6 +1476,7 @@ public class ParametersButton : MonoBehaviour {
     public int NumberOfBaysDownAisle
     {
         get { return numberOfBaysDownAisle; }
+        set { numberOfBaysDownAisle = value; }
     }
     public bool EnableTouchControls {
         get { return enableTouchControls; }
@@ -1472,7 +1484,7 @@ public class ParametersButton : MonoBehaviour {
     }
 
 	public string IOStationToString{
-		get{ if(IOStation == InboundOutboundStation.sameEnd) return "Sam...";
+		get{ if(iOStation == InboundOutboundStation.sameEnd) return "Sam...";
 			else return "Opp...";
 		}
 	}
@@ -1484,6 +1496,7 @@ public class ParametersButton : MonoBehaviour {
         }
     }
 
+  
     public string DropOffLocationString
     {
         get
@@ -1501,5 +1514,22 @@ public class ParametersButton : MonoBehaviour {
     {
         get { return pAndDBeamsAcross; }
         set { pAndDBeamsAcross = value; }
+    }
+
+    public PickUpDropOffLocation DropOffLocation
+    {
+        get { return dropOffLocation; }
+        set { dropOffLocation = value; }
+    }
+    public PickUpDropOffLocation PickUpLocation
+    {
+        get { return pickUpLocation; }
+        set { pickUpLocation = value; }
+    }
+
+    public InboundOutboundStation IOStation
+    {
+        get { return iOStation; }
+        set { iOStation = value; }
     }
 }
