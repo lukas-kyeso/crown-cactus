@@ -291,7 +291,7 @@ public class FactoryBuilder : MonoBehaviour {
                 if (c != null) {
                     Vector3 colPos = c.getColPos();
                     bool on = Vector3.Distance(Camera.main.transform.position, colPos) > frameRateCamDistThreshold;
-                    c.setPerformanceViewOn(on);
+                    c.setPerformanceViewOn(true);
                     columnPerfStates[i] = on;
                     frameRateAtLastChange = avgFps;
                 }
