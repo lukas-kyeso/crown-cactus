@@ -397,8 +397,8 @@ public class ParametersButton : MonoBehaviour {
         }
         else if (selectedPage == 1) {
             pageHeadings = new GUIContent[] { new GUIContent(optionsTextureOff), new GUIContent("Inputs"), new GUIContent("Report") };
-       //     showDomainBoxes();
-      //      showLeftMenu();
+            showDomainBoxes();
+            showLeftMenu();
 
         }
         else if (selectedPage == 2) {

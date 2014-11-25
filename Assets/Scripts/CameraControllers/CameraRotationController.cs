@@ -38,46 +38,47 @@ public class CameraRotationController : MonoBehaviour {
 	{
       
 			if(GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.aisleLocation){
-                this.transform.LookAt(NumberOfAislesTarget);
-			}
-            else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.bayLocation)
-            {
-				// do nothing
-            }
+			this.transform.LookAt(NumberOfAislesTarget.position  + -Camera.main.transform.right * 4);
+		}
+//		else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.bayLocation)
+//            {
+//			print ("in here");
+//				// do nothing
+//            }
             else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.levelsLocation)
             {
-                this.transform.LookAt(NumberOfLevelsTarget);
-            }
-            else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.verticalBeamSpacingLocation)
+			this.transform.LookAt(NumberOfLevelsTarget.position  + -Camera.main.transform.right * 4);
+		}
+		else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.verticalBeamSpacingLocation)
             {
              //   this.transform.LookAt(MiddleOfFirstColumnTarget);
             }
             else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.bottomBeamHeightLocation)
             {
-                this.transform.LookAt(BottomBeamHeightTarget);
-            }
-            else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.sideLocation)
+			this.transform.LookAt(BottomBeamHeightTarget.position );
+		}
+		else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.sideLocation)
             {
                 
             }
 			else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.inboundOutboundStationLocation)
 			{
-				this.transform.LookAt(InboundOutboundTarget);
+			this.transform.LookAt(InboundOutboundTarget.position);
 			}
             else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.pickUpLocation || GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.dropOffLocation)
             {
-                this.transform.LookAt(PickUpDropOffTarget);
-            }
-            else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.pAndDLevelsLocation)
+			this.transform.LookAt(PickUpDropOffTarget.position);
+		}
+		else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.pAndDLevelsLocation)
             {
-                this.transform.LookAt(PandDLevelsTarget);
-            }
-            else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.pAndDWidthLocation)
+			this.transform.LookAt(PandDLevelsTarget.position);
+		}
+		else if (GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation == Location.pAndDWidthLocation)
             {
-                this.transform.LookAt(PandDWidthTarget);
-            }
-			else{
-				this.transform.LookAt (flrCenter.transform);
+			this.transform.LookAt(PandDWidthTarget.position);
+		}
+		else{
+				this.transform.LookAt (flrCenter.transform.position + -Camera.main.transform.right * 8);
 			}
    
 
