@@ -77,7 +77,7 @@ public class FactoryBuilder : MonoBehaviour {
         checkForInput();
         if (placedInitialPallets) {
             updateColumns();
-            updateForPerformance();
+       //     updateForPerformance();
         }
         camTarget.transform.position = getFactoryCenter();
     }

@@ -405,8 +405,8 @@ public class ParametersButton : MonoBehaviour {
         }
         else if (selectedPage == 1) {
             pageHeadings = new GUIContent[] { new GUIContent(optionsTextureOff), new GUIContent("Inputs"), new GUIContent("Report") };
-       //     showDomainBoxes();
-      //      showLeftMenu();
+           // showDomainBoxes();
+          //  showLeftMenu();
 
         }
         else if (selectedPage == 2) {
@@ -777,7 +777,7 @@ public class ParametersButton : MonoBehaviour {
         if (GUI.Button(new Rect(0, mainYPos, sidebarWidth, elementHeight), firstLevelBeamPresent ? toggleOn : toggleOff, toggleButtonStyle)) {
             firstLevelBeamPresent = !firstLevelBeamPresent;
             factoryBuilder.GetComponent<FactoryBuilder>().setBottomBarOn(firstLevelBeamPresent);
-            currentCameraLocation = Location.bottomBeamHeightLocation;
+           // currentCameraLocation = Location.bottomBeamHeightLocation;
             if (!firstLevelBeamPresent)
             {
                 highlightController.SetHighlightArea(highlightSection.none);
@@ -1308,26 +1308,44 @@ public class ParametersButton : MonoBehaviour {
     {
         highlightController.SetHighlightArea(highlightSection.NumberOfPAndDLevels);
     }
+	public void invokeRefreshPAndDLevelsHighlighting(){
+		Invoke ("refreshPAndDLevelsHighlighting", 1);
+	}
     void refreshPAndDBeamsAcrossHighlighting()
     {
         highlightController.SetHighlightArea(highlightSection.NumberOfPAndDBeamsAcross);
     }
+	public void invokeRefreshPAndDBeamsAcrossHighlighting(){
+		Invoke ("refreshPAndDBeamsAcrossHighlighting", 1);
+	}
     void refreshPickUpHighlighting()
     {
         highlightController.SetHighlightArea(highlightSection.PickUp);
     }
+	public void invokeRefresPickUpHighlighting(){
+		Invoke ("refreshPickUpHighlighting", 1);
+	}
     void refreshDropOffHighlighting()
     {
         highlightController.SetHighlightArea(highlightSection.DropOff);
     }
+	public void invokeRefreshDropOffHighlighting(){
+		Invoke ("refreshDropOffHighlighting", 1);
+	}
     void refreshPalletsPerBeamHighlighting()
     {
         highlightController.SetHighlightArea(highlightSection.NumberOfPalletsPerBeam);
     }
+	public void invokeRefreshPalletsPerBeamHighlighting(){
+		Invoke ("refreshPalletsPerBeamHighlighting", 1);
+	}
    	
 	void refreshInboundOutboundHighlighting()
 	{
 		highlightController.SetHighlightArea (highlightSection.InboundOutbound);
+	}
+	public void invokeRefreshInboundOutboundHighlighting(){
+		Invoke ("refreshInboundOutboundHighlighting", 1);
 	}
     private int TouchToRowIndex(Vector2 touchPos) {
         float y = Screen.height - touchPos.y;  // invert y coordinate

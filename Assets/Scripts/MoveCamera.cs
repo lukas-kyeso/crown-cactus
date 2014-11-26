@@ -102,6 +102,7 @@ public class MoveCamera : TouchLogicV2
 			//				Camera.main.transform.RotateAround (centre.transform.position, new Vector3 (0.0f, 0.1f, 0.0f), DistanceX * Time.deltaTime * 10f);
 			//			}
 			angle = Vector3.Angle (centre.transform.position - this.transform.position, Vector3.up);
+			print(angle);
 			if(angle > 95){
 				if(DistanceY > 0){
 					float tempY = DistanceY * 2;
@@ -109,7 +110,7 @@ public class MoveCamera : TouchLogicV2
 					Camera.main.transform.RotateAround (centre.transform.position, transform.right, tempY2 * Time.deltaTime * 1f);
 				}
 			}
-			if(angle < 185){
+			if(angle < 150){
 				if(DistanceY < 0){
 					float tempY = DistanceY * 2;
 					float tempY2 = (tempY * -1);

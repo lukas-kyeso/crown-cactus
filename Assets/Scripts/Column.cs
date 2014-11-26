@@ -54,6 +54,9 @@ public class Column {
         startHeight = columnObject.transform.position.y;
         createExtraFrames();
         setBottomBarOn(parameters.GetComponent<ParametersButton>().FirstLevelBeamPresent);
+
+		if (colNum != 0)
+						setPerformanceViewOn (true);
     }
 
     public void Update() {

@@ -118,13 +118,13 @@ public class CameraRotationController : MonoBehaviour {
 		if (Input.GetKey (KeyCode.A))
 		{
             GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation = Location.none;
-			this.transform.Translate (Vector3.left * (Time.deltaTime*10));
+			this.transform.Translate (Vector3.left * (Time.deltaTime*10) + Vector3.forward * .02f);
 		}
 		
 		if (Input.GetKey (KeyCode.D))
 		{
             GameObject.Find("ParametersButton").GetComponent<ParametersButton>().currentCameraLocation = Location.none;
-			this.transform.Translate (Vector3.right * (Time.deltaTime*10));
+			this.transform.Translate (Vector3.right * (Time.deltaTime*10) - Vector3.forward * .02f);
 		}
 		
 		if (Input.GetKey (KeyCode.W))

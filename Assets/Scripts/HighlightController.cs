@@ -156,8 +156,8 @@ public class HighlightController {
             bottomPlane.transform.parent = middleOfLastColumnPallet.transform;
             arrowPlane.transform.parent = middleOfLastColumnPallet.transform;
 
-            bottomPlane.transform.localScale = new Vector3(0, .1f, parametersButton.BeamLength / 2000f);
-            arrowPlane.transform.localScale = new Vector3(0, parametersButton.BeamLength / 1000f, .5f);
+            bottomPlane.transform.localScale = new Vector3(1, .1f, parametersButton.BeamLength / 2000f);
+            arrowPlane.transform.localScale = new Vector3(1, parametersButton.BeamLength / 1000f, .5f);
             arrowPlane.transform.Rotate(90, 0, 0);
             if (palletsPerBay == 1) {
                 bottomPlane.transform.position = new Vector3(0, middleOfLastColumnPalletY, middleOfLastColumnPalletX);

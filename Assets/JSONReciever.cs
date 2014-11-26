@@ -4,6 +4,7 @@ using SimpleJSON;
 
 public class JSONReciever : MonoBehaviour {
 
+	HighlightController highlightController;
     ParametersButton parametersButton;
 	string jsonString = "";
 
@@ -39,14 +40,74 @@ public class JSONReciever : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         parametersButton = GameObject.Find("ParametersButton").GetComponent<ParametersButton>();
-        //ParseJSON(test);
+		highlightController = GameObject.Find ("ParametersButton").GetComponent<ParametersButton> ().highlightController;
+        
 	}
 	
-	// Update is called once per frame
-	void Update () {
 
+
+	void ParseCameraView(string camera_view){
+		switch (camera_view) {
+		case "bottomBeamPresent":
+			parametersButton.currentCameraLocation = Location.bottomBeamHeightLocation;
+			if (parametersButton.FirstLevelBeamPresent) highlightController.SetHighlightArea(highlightSection.BottomBeamHeight);
+			else highlightController.SetHighlightArea(highlightSection.none);
+			break;
+		case "levels":
+			highlightController.SetHighlightArea(highlightSection.NumberOfLevels);
+			parametersButton.currentCameraLocation = Location.levelsLocation;
+			break;
+		case "bottomBeamHeight":
+			highlightController.SetHighlightArea(highlightSection.BottomBeamHeight);
+			parametersButton.currentCameraLocation = Location.bottomBeamHeightLocation;
+			break;
+		case "beamLength":
+			highlightController.SetHighlightArea(highlightSection.BeamLength);
+			parametersButton.currentCameraLocation = Location.verticalBeamSpacingLocation;
+			break;
+		case "pAndDBeamsAcross":
+			parametersButton.currentCameraLocation = Location.pAndDWidthLocation;
+			parametersButton.invokeRefreshPAndDBeamsAcrossHighlighting();
+			break;
+		case "palletsPerBeam":
+			parametersButton.currentCameraLocation = Location.verticalBeamSpacingLocation;
+			parametersButton.invokeRefreshPalletsPerBeamHighlighting();
+			// INVOKE refreshPalletsPerBeamHighlighting
+			break;
+		case "aisles":
+			highlightController.SetHighlightArea(highlightSection.NumberOfAisles);
+			parametersButton.currentCameraLocation = Location.aisleLocation;
+			break;
+		case "pickUpLocationForPutaway":
+			parametersButton.currentCameraLocation = Location.pickUpLocation;
+			parametersButton.invokeRefresPickUpHighlighting();
+			// invoke
+			break;
+		case "inboundAndOutboundStation":
+			parametersButton.currentCameraLocation = Location.inboundOutboundStationLocation;
+			parametersButton.invokeRefreshInboundOutboundHighlighting();
+			// invoke
+			break;
+		case "verticalBeamSpacing":
+			highlightController.SetHighlightArea(highlightSection.VerticalBeamSpacing);
+			parametersButton.currentCameraLocation = Location.verticalBeamSpacingLocation;
+			break;
+		case "baysDownAisles":
+			highlightController.SetHighlightArea(highlightSection.NumberOfBaysDownAisle);
+			parametersButton.currentCameraLocation = Location.bayLocation;
+			break;
+		case "dropOffLocationForRetrieval":
+			parametersButton.currentCameraLocation = Location.dropOffLocation;
+			parametersButton.invokeRefreshDropOffHighlighting();
+			// invoke
+			break;
+		case "pAndDLevels":
+			parametersButton.currentCameraLocation = Location.pAndDLevelsLocation;
+			parametersButton.invokeRefreshPAndDLevelsHighlighting();
+			// invoke
+			break;
+		}
 	}
-
 	void ParseJSON(string string_parameter){
         var JSONObject = JSON.Parse(string_parameter);
 
