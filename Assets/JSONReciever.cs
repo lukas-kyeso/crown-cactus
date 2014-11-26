@@ -106,7 +106,7 @@ public class JSONReciever : MonoBehaviour {
 
         if (palletsPerBeam != 0) parametersButton.PalletsBetweenFrames = palletsPerBeam;
 
-        if (aisles != 0) parametersButton.NumAisles = aisles;
+        if (aisles != 0) parametersButton.NumAisles = aisles + 1;
 
         if (pickUpLocationForPutaway == "P&D") parametersButton.PickUpLocation = PickUpDropOffLocation.pAndD;
         else parametersButton.PickUpLocation = PickUpDropOffLocation.dock;
