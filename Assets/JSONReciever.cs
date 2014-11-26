@@ -39,7 +39,7 @@ public class JSONReciever : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         parametersButton = GameObject.Find("ParametersButton").GetComponent<ParametersButton>();
-        ParseJSON(test);
+        //ParseJSON(test);
 	}
 	
 	// Update is called once per frame
@@ -124,7 +124,4 @@ public class JSONReciever : MonoBehaviour {
         if (pAndDLevels != 0) parametersButton.PAndDLevels = pAndDLevels;
         
     }
-	void OnGUI(){
-		GUI.Label (new Rect (Screen.width / 2, Screen.height / 2, 100, 100), jsonString);
-	}
 }
